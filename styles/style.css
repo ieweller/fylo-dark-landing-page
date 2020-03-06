@@ -1,5 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Raleway:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@400;700&display=swap");
+* {
+  box-sizing: border-box; }
+
 body {
+  margin: 0;
   background-color: #181f2a;
   color: white;
   font-family: 'Open Sans', sans-serif; }
@@ -7,7 +11,8 @@ body {
 header {
   display: flex;
   justify-content: space-between;
-  padding: 32px; }
+  padding: 34px 52px;
+  background-color: #1c2431; }
   header .header--logo {
     width: 8em; }
     header .header--logo img {
@@ -23,25 +28,125 @@ header {
         font-size: 0.8em;
         text-decoration: none; }
 
-#hero .wrapper {
-  margin: 0 auto;
-  max-width: 480px;
-  text-align: center; }
+#hero {
+  padding-bottom: 162px;
+  background: url(../images/bg-curvy-desktop.svg);
+  background-attachment: local;
+  background-color: #1c2431;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain; }
+  #hero .wrapper {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    padding: 0 32px;
+    max-width: 480px;
+    text-align: center; }
+  #hero .hero--image {
+    width: 100%; }
+    #hero .hero--image img {
+      width: 100%;
+      height: auto; }
+  #hero h1 {
+    margin: 12px;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.6em;
+    font-weight: 700;
+    letter-spacing: 1px;
+    line-height: 1.4em; }
+  #hero p {
+    width: 80%;
+    font-size: 0.8em;
+    font-weight: 300;
+    line-height: 1.5em; }
+  #hero a {
+    border-radius: 99px;
+    padding: 9px 56px;
+    margin: 6px 0;
+    background: #43b2d0;
+    color: white;
+    font-size: 0.8em;
+    text-decoration: none; }
 
-#hero .hero--image {
+#features {
+  margin: 0; }
+  #features .wrapper {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    grid-template-rows: auto auto;
+    grid-row-gap: 56px;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 620px; }
+  #features .icon-text-block {
+    text-align: center; }
+    #features .icon-text-block img {
+      height: 56px;
+      width: auto; }
+    #features .icon-text-block h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.8em;
+      letter-spacing: 1px; }
+    #features .icon-text-block p {
+      font-size: 0.7em; }
+
+#cta .wrapper {
+  display: grid;
+  grid-template-columns: 50% 45%;
+  grid-template-rows: auto;
+  justify-content: space-between;
+  margin: 72px auto;
+  max-width: 820px;
   width: 100%; }
-  #hero .hero--image img {
-    width: 100%;
-    height: auto; }
 
-#hero h1 {
+#cta img {
+  width: 100%; }
+
+#cta .text-block {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center; }
+
+#cta h2 {
   font-family: 'Raleway', sans-serif;
-  font-size: 1.6em;
-  font-weight: 400;
-  line-height: 1.7em; }
+  font-size: 1.5em;
+  letter-spacing: 1px; }
 
-#hero p {
-  font-size: 1em; }
+#cta p, #cta a {
+  font-size: 0.8em; }
+
+#cta .btn {
+  align-items: center;
+  display: flex;
+  border-bottom: 1px solid #62e0d9;
+  padding: 4px; }
+  #cta .btn img {
+    height: 0.8em;
+    margin: 0 6px -1px 6px;
+    width: 0.8em; }
+  #cta .btn a {
+    color: #71e0dc;
+    text-decoration: none; }
+
+#testimonials .wrapper {
+  display: flex; }
+
+#testimonials blockquote {
+  padding: 24px 16px;
+  background-color: #202a3c; }
+  #testimonials blockquote p {
+    font-size: 0.6em; }
+  #testimonials blockquote footer {
+    display: flex; }
+    #testimonials blockquote footer img {
+      border-radius: 50%;
+      height: 2em;
+      width: 2em; }
+    #testimonials blockquote footer p:first-child {
+      font-weight: 700; }
 
 footer .footer--column.social a {
   color: white;
