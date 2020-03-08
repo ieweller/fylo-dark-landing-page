@@ -16,8 +16,8 @@
 
 <body>
   <header>
-    <div class="header--logo"><img src="images/logo.svg" alt="logo"></div>
-    <ul>
+    <div class="header__logo"><img src="images/logo.svg" alt="Fylo"></div>
+    <ul class="header__menu">
       <li><a href="#">Features</a></li>
       <li><a href="#">Team</a></li>
       <li><a href="#">Sign In</a></li>
@@ -26,18 +26,17 @@
 
   <div id="hero">
     <div class="wrapper">
-      <div class="hero--image"><img src="images/illustration-intro.png" alt="loading files into folder"></div>
+      <div class="hero__background"><img src="images/illustration-intro.png" alt=""></div>
       <h1>All your files in one secure location, accessible anywhere.</h1>
       <p>Fylo stores all your most important files in one secure location. Access them wherever
         you need, share and collaborate with friends, family, and co-workers.</p>
       <a href="#">Get Started</a>
     </div>
   </div>
-
   <div id="features">
     <div class="wrapper">
-      <div class="icon-text-block">
-        <img src="images/icon-access-anywhere.svg" alt="computer and phone">
+      <div class="features__text-block">
+        <img class="features__text-block__icon" src="images/icon-access-anywhere.svg" alt="">
         <h2>Access your files, anywhere</h2>
         <p>
           The ability to use a smartphone, tablet, or computer to access your account means your
@@ -45,8 +44,8 @@
         </p>
       </div>
 
-      <div class="icon-text-block">
-        <img src="images/icon-security.svg" alt="shield">
+      <div class="features__text-block">
+        <img class="features__text-block__icon" src="images/icon-security.svg" alt="">
         <h2>Security you can trust</h2>
         <p>
           2-factor authentication and user-controlled encryption are just a couple of the security
@@ -54,8 +53,8 @@
         </p>
       </div>
 
-      <div class="icon-text-block">
-        <img src="images/icon-collaboration.svg" alt="">
+      <div class="features__text-block">
+        <img class="features__text-block__icon" src="images/icon-collaboration.svg" alt="">
         <h2>Real-time collaboration</h2>
         <p>
           Securely share files and folders with friends, family and colleagues for live collaboration.
@@ -63,8 +62,8 @@
         </p>
       </div>
 
-      <div class="icon-text-block">
-        <img src="images/icon-any-file.svg" alt="folders">
+      <div class="features__text-block">
+        <img class="features__text-block__icon" src="images/icon-any-file.svg" alt="">
         <h2>Store any type of file</h2>
         <p>
           Whether you're sharing holidays photos or work documents, Fylo has you covered allowing for all
@@ -77,8 +76,8 @@
   <div id="cta">
     <div class="wrapper">
       <div><img src="images/illustration-stay-productive.png" alt=""></div>
-      <div class="text-block">
-        <h2>Stay productive, <wbr>wherever you are</h2>
+      <div class="cta__text-block">
+        <h2>Stay productive, <br>wherever you are</h2>
         <p>
           Never let location be an issue when accessing your files. Fylo has you covered for all of your file
           storage needs.
@@ -90,27 +89,27 @@
         </p>
         <div class="btn">
           <a href="#">See how Fylo works</a>
-          <img src="images/icon-arrow.svg" alt="arrow">
+          <img src="images/icon-arrow.svg" alt="">
         </div>
       </div>
     </div>
   </div>
 
   <div id="testimonials">
-    <img src="images/bg-quotes.png" alt="">
     <div class="wrapper">
+      <img class="testimonials__flair" src="images/bg-quotes.png" alt="">
       <blockquote>
         <p>
           Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
           become a well-oiled collaboration machine.
         </p>
-        <footer>
-          <img src="images/profile-1.jpg" alt="satish patel">
+        <div class="footer">
+          <img src="images/profile-1.jpg" class="testimonial--flair" alt="">
           <span>
             <p>Satish Patel</p>
             <p>Founder & CEO, Huddle</p>
           </span>
-        </footer>
+        </div>
       </blockquote>
 
       <blockquote>
@@ -118,13 +117,13 @@
           Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
           become a well-oiled collaboration machine.
         </p>
-        <footer>
-          <img src="images/profile-2.jpg" alt="bruce mckenzie">
+        <div class="footer">
+          <img src="images/profile-2.jpg" alt="">
           <span>
             <p>Bruce McKenzie</p>
             <p>Founder & CEO, Huddle</p>
           </span>
-        </footer>
+        </div>
       </blockquote>
 
       <blockquote>
@@ -132,77 +131,94 @@
           Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has
           become a well-oiled collaboration machine.
         </p>
-        <footer>
-          <img src="images/profile-3.jpg" alt="iva boyd">
+        <div class="footer">
+          <img src="images/profile-3.jpg" alt="">
           <span>
             <p>Iva Boyd</p>
             <p>Founder & CEO, Huddle</p>
           </span>
-        </footer>
+        </div>
       </blockquote>
     </div>
   </div>
 
-  <div>
-    <h2>Get early access today</h2>
-    <p>
-      It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
-      questions, our support team would be happy to help you.
-    </p>
-    <form>
-      <input type="email" placeholder="email@example.com">
-      <button>Get Started For Free</button>
-    </form>
+  <div id="email-form">
+    <div class="wrapper">
+      <h2>Get early access today</h2>
+      <p>
+        It only takes a minute to sign up and our free starter tier is extremely generous. If you have any
+        questions, our support team would be happy to help you.
+      </p>
+      <form>
+        <input type="email" placeholder="email@example.com">
+        <button>Get Started For Free</button>
+      </form>
+    </div>
   </div>
 
   <footer>
-    <div>
-      <img src="images/icon-location.svg" alt="location">
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-        dolore magna aliqua
-      </p>
-    </div>
-    <div>
-      <img src="images/icon-phone.svg" alt="location">
-      <a href="#">+1-543-123-4567</a>
-      <img src="images/icon-location.svg" alt="location">
-      <a href="#">example@fylo.com</a>
-    </div>
-    <div>
-      <ul>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Jobs</a></li>
-        <li><a href="#">Press</a></li>
-        <li><a href="#">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <ul>
-        <li><a href="#">Contact Us</a></li>
-        <li><a href="#">Terms</a></li>
-        <li><a href="#">Privacy</a></li>
-      </ul>
-    </div>
-    <div class="footer--column social">
-      <a href="#">
-        <span class="fa-stack fa-xs">
-          <i class="far fa-circle fa-stack-2x"></i>
-          <i class="fab fa-facebook-f fa-stack-1x"></i>
-        </span>
-      </a>
-      <a href="#">
-        <span class="fa-stack fa-xs">
-          <i class="far fa-circle fa-stack-2x"></i>
-          <i class="fab fa-twitter fa-stack-1x"></i>
-        </span>
-      </a>
-      <a href="#">
-        <span class="fa-stack fa-xs">
-          <i class="far fa-circle fa-stack-2x"></i>
-          <i class="fab fa-instagram fa-stack-1x"></i>
-        </span>
-      </a>
+    <div class="wrapper">
+      <div class="footer__logo">
+        <img src="images/logo.svg" alt="Fylo">
+      </div>
+      <div class="footer__links">
+        <div class="footer__links__column">
+          <div>
+            <img src="images/icon-location.svg" alt="location">
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua
+            </p>
+          </div>
+        </div>
+        <div class="footer__links__column">
+          <div>
+            <img src="images/icon-phone.svg" alt="location">
+            <a href="#">+1-543-123-4567</a>
+          </div>
+          <div>
+            <img src="images/icon-location.svg" alt="location">
+            <a href="#">example@fylo.com</a>
+          </div>
+        </div>
+        <div class="footer__links__column">
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Jobs</a></li>
+            <li><a href="#">Press</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer__links__column">
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Terms</a></li>
+            <li><a href="#">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer__links__column social">
+          <div>
+            <a href="#">
+              <span class="fa-stack fa-xs">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fab fa-facebook-f fa-stack-1x"></i>
+              </span>
+            </a>
+            <a href="#">
+              <span class="fa-stack fa-xs">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fab fa-twitter fa-stack-1x"></i>
+              </span>
+            </a>
+            <a href="#">
+              <span class="fa-stack fa-xs">
+                <i class="far fa-circle fa-stack-2x"></i>
+                <i class="fab fa-instagram fa-stack-1x"></i>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   </footer>
 </body>
