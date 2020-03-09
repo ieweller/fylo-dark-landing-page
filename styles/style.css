@@ -1,6 +1,9 @@
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;500;600;700&display=swap");
 * {
   box-sizing: border-box; }
+
+html {
+  font-size: 22px; }
 
 body {
   margin: 0;
@@ -21,23 +24,33 @@ header {
   justify-content: space-between;
   padding: 2rem 2rem;
   background-color: #1c2431; }
+  @media (max-width: 720px) {
+    header {
+      padding: 1.4rem 1.25rem; } }
   header .header__logo {
-    width: 8rem; }
+    max-width: 7rem;
+    width: 25%; }
     header .header__logo img {
       width: 100%;
       height: auto; }
   header .header__menu {
     display: flex;
+    margin: 0;
     list-style: none; }
     header .header__menu li {
-      margin: 0 1em; }
+      margin: 0 0.6em; }
       header .header__menu li a {
         color: white;
-        font-size: 0.8em;
+        font-family: 'Raleway', sans-serif;
+        font-size: 0.7em;
+        font-weight: 300;
         text-decoration: none; }
+        @media (max-width: 720px) {
+          header .header__menu li a {
+            font-size: 0.8em; } }
 
 #hero {
-  padding-bottom: 10em;
+  padding-bottom: 6.5em;
   width: 100%;
   background: url(../images/bg-curvy-desktop.svg);
   background-attachment: local;
@@ -45,39 +58,53 @@ header {
   background-position: bottom right;
   background-repeat: no-repeat;
   background-size: contain; }
+  @media (max-width: 720px) {
+    #hero {
+      padding-bottom: 0; } }
   #hero .wrapper {
     align-items: center;
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     padding: 0 2rem;
-    max-width: 35rem;
+    max-width: 33.5rem;
     text-align: center; }
   #hero .hero__background {
+    margin: 1.55rem 0;
     width: 100%; }
     #hero .hero__background img {
-      margin: 0.5rem;
       height: auto;
       width: 100%; }
   #hero h1 {
-    margin: 0.5rem 0;
+    margin: 0.4rem 0;
     font-size: 1.6em;
     font-weight: 600;
     letter-spacing: 0.0625em;
     line-height: 1.4em; }
+    @media (max-width: 720px) {
+      #hero h1 {
+        width: 100%; } }
   #hero p {
     width: 78%;
     font-size: 0.8em;
     font-weight: 300;
     line-height: 1.5em; }
+    @media (max-width: 720px) {
+      #hero p {
+        width: 100%;
+        font-size: 1em; } }
   #hero a {
-    border-radius: 99em;
-    padding: 0.5em 3.5em;
-    margin: 0.4em 0;
+    border-radius: 99rem;
+    padding: 0.8rem 4rem;
+    margin: 0.7rem 0;
     background: #43b2d0;
     color: white;
-    font-size: 0.8em;
+    font-size: 0.6em;
     text-decoration: none; }
+    @media (max-width: 720px) {
+      #hero a {
+        padding: 1rem 5.5rem;
+        font-size: 0.9em; } }
 
 #features {
   margin: 0; }
