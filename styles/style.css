@@ -37,6 +37,7 @@ h6 {
       height: 27rem; } }
 
 header {
+  align-content: center;
   display: flex;
   justify-content: space-between;
   padding: 2rem 2rem; }
@@ -45,6 +46,7 @@ header {
       padding: 1.4rem 1.25rem; } }
   header .header__logo {
     max-width: 7rem;
+    min-width: 4.5rem;
     width: 25%; }
     header .header__logo img {
       width: 100%;
@@ -54,7 +56,7 @@ header {
     margin: 0;
     list-style: none; }
     header .header__menu li {
-      margin: 0 0.6em; }
+      margin: 0 0.3em; }
       header .header__menu li a {
         color: white;
         font-family: 'Raleway', sans-serif;
@@ -63,7 +65,7 @@ header {
         text-decoration: none; }
         @media (max-width: 720px) {
           header .header__menu li a {
-            font-size: 0.8em; } }
+            font-size: 0.6em; } }
 
 #hero {
   margin: 0 auto 6rem auto;
@@ -108,14 +110,17 @@ header {
     background: #43b2d0;
     color: white;
     font-size: 0.6em;
+    font-weight: 400;
     text-decoration: none; }
     @media (max-width: 720px) {
       #hero a {
-        padding: 1rem 5.5rem;
+        padding: 1rem;
+        width: 100%;
         font-size: 0.9em; } }
 
 #features {
   margin: 0;
+  margin-bottom: 3.5rem;
   width: 100%; }
   #features .wrapper {
     display: grid;
@@ -123,7 +128,7 @@ header {
     grid-template-rows: auto auto;
     grid-row-gap: 3rem;
     justify-content: space-between;
-    margin: 3rem auto 0 auto;
+    margin: 0 auto;
     max-width: 38rem; }
     @media (max-width: 720px) {
       #features .wrapper {
@@ -157,74 +162,78 @@ header {
           font-size: 1em;
           font-weight: 300; } }
 
-#cta .wrapper {
-  display: grid;
-  grid-template-columns: 50% 45%;
-  grid-template-rows: auto;
-  justify-content: space-between;
-  margin: 4.5rem auto;
-  max-width: 50rem;
-  padding: 2em;
-  width: 100%; }
-  @media (max-width: 720px) {
-    #cta .wrapper {
-      display: flex;
-      flex-direction: column; } }
-
-#cta .cta__image img {
-  width: 100%; }
-
-#cta .cta__text-block {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center; }
-
-#cta h2 {
+#cta {
   margin: 0;
-  font-size: 1.6em;
-  font-weight: 600;
-  letter-spacing: 0.0625em;
-  line-height: 1.3em; }
-  @media (max-width: 720px) {
-    #cta h2 {
-      margin: 2em 0 0.4em 0;
-      font-size: 1.15em;
-      line-height: 1.7em; } }
-
-#cta p {
-  margin: 0.5rem 0; }
-
-#cta a {
-  margin-bottom: -0.2em; }
-
-#cta p, #cta a {
-  font-size: 0.7em;
-  font-weight: 300; }
-  @media (max-width: 720px) {
-    #cta p, #cta a {
-      font-size: 1em; } }
-
-#cta .btn {
-  align-items: center;
-  display: flex;
-  border-bottom: 0.1em solid #62e0d9;
-  padding: 0.25em; }
-  #cta .btn img {
-    height: 0.8em;
-    margin: 0 6px -1px 6px;
-    width: 0.8rem; }
-  #cta .btn a {
-    color: #71e0dc;
-    text-decoration: none; }
+  margin-bottom: 4.5rem; }
+  #cta .wrapper {
+    display: grid;
+    grid-template-columns: 50% 45%;
+    grid-template-rows: auto;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 50rem;
+    padding: 2em;
+    width: 100%; }
+    @media (max-width: 720px) {
+      #cta .wrapper {
+        display: flex;
+        flex-direction: column; } }
+  #cta .cta__image img {
+    width: 100%; }
+  #cta .cta__text-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center; }
+  #cta h2 {
+    margin: 0;
+    font-size: 1.6em;
+    font-weight: 600;
+    letter-spacing: 0.0625em;
+    line-height: 1.3em; }
+    @media (max-width: 720px) {
+      #cta h2 {
+        margin: 2em 0 0.4em 0;
+        font-size: 1.15em;
+        line-height: 1.7em; } }
+  #cta p {
+    margin: 0.5rem 0; }
+  #cta a {
+    margin-bottom: -0.2em; }
+  #cta p, #cta a {
+    font-size: 0.7em;
+    font-weight: 300; }
+    @media (max-width: 720px) {
+      #cta p, #cta a {
+        font-size: 1em; } }
+  #cta .btn {
+    align-items: center;
+    display: flex;
+    border-bottom: 0.1em solid #62e0d9;
+    padding: 0.25em; }
+    #cta .btn img {
+      height: 0.8em;
+      margin: 0 6px -1px 6px;
+      width: 0.8rem; }
+    #cta .btn a {
+      color: #71e0dc;
+      text-decoration: none; }
 
 #testimonials {
-  margin: 6rem 0; }
+  margin: 0;
+  margin-bottom: 4.5rem; }
+  @media (max-width: 720px) {
+    #testimonials {
+      flex-direction: column;
+      margin-bottom: 2em; } }
   #testimonials .wrapper {
     align-items: flex-start;
     display: flex;
-    margin: auto;
+    margin: 0 auto;
     max-width: 48rem; }
+    @media (max-width: 720px) {
+      #testimonials .wrapper {
+        flex-direction: column; } }
   #testimonials .testimonials__flair {
     position: absolute;
     z-index: -1;
@@ -234,11 +243,14 @@ header {
   #testimonials blockquote {
     box-shadow: 0.4rem 0.4rem 0.2rem rgba(255, 255, 255, 0.02);
     flex-basis: 1;
-    margin: 0 1em;
+    margin: 0 1em 1em 1em;
     padding: 1em 1.2em;
     background-color: #202a3c; }
     #testimonials blockquote p {
       font-size: 0.6em; }
+      @media (max-width: 720px) {
+        #testimonials blockquote p {
+          font-size: 0.8em; } }
     #testimonials blockquote .footer {
       display: flex;
       align-content: center; }
@@ -248,6 +260,9 @@ header {
         margin: 0;
         font-size: 0.4em;
         line-height: 1.1em; }
+        @media (max-width: 720px) {
+          #testimonials blockquote .footer p {
+            font-size: 0.6em; } }
         #testimonials blockquote .footer p:first-child {
           margin-bottom: 0.6em; }
       #testimonials blockquote .footer img {
@@ -264,9 +279,9 @@ header {
     box-shadow: 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    padding: 2em 3em;
+    padding: 2em;
     max-width: 38rem;
-    margin: 9rem auto 2rem auto;
+    margin: 0 auto;
     background-color: #1c2431;
     text-align: center; }
   #email-form h2 {
@@ -280,19 +295,36 @@ header {
     display: flex;
     justify-content: space-between;
     margin: 0; }
+    @media (max-width: 720px) {
+      #email-form form {
+        flex-direction: column; } }
     #email-form form input[type="email"] {
       border: none;
       border-radius: 99em;
-      padding: 0.8em 2em;
+      padding: 2em 3em;
+      margin: 1em 0;
       width: 65%; }
+      @media (max-width: 720px) {
+        #email-form form input[type="email"] {
+          width: 100%; } }
       #email-form form input[type="email"]::placeholder {
-        color: #afafaf; }
+        color: #afafaf;
+        font-size: 1.4em; }
     #email-form form button {
       border: none;
       border-radius: 99em;
+      margin: 1em 0;
+      padding: 1em;
       width: 30%;
+      font-size: 0.6em;
       background-color: #43b2d0;
       color: white; }
+      @media (max-width: 720px) {
+        #email-form form button {
+          font-size: 0.8em; } }
+      @media (max-width: 720px) {
+        #email-form form button {
+          width: 100%; } }
 
 footer {
   z-index: 0;
@@ -304,7 +336,7 @@ footer {
     max-width: 58rem;
     font-size: 0.7em; }
   footer .footer__logo {
-    margin: 3em; }
+    margin: 3em 0; }
   footer .footer__links {
     display: flex;
     justify-content: space-between; }
@@ -323,7 +355,8 @@ footer {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      justify-content: space-between;
+      justify-content: flex-start;
+      margin-bottom: 2em;
       max-width: 100%; }
       footer .footer__links__column img {
         float: left;
@@ -331,6 +364,16 @@ footer {
       footer .footer__links__column p {
         overflow: hidden;
         margin: 0; }
+      footer .footer__links__column__link-icon {
+        align-items: center;
+        display: flex;
+        justify-content: center; }
+      footer .footer__links__column ul {
+        margin: 0;
+        padding: 0; }
+      footer .footer__links__column a {
+        line-height: 3em;
+        margin-right: 0.5em; }
       footer .footer__links__column:first-child {
         width: 16rem; }
       footer .footer__links__column:nth-child(2) {
