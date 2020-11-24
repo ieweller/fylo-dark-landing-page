@@ -254,7 +254,7 @@ header {
     #testimonials blockquote .footer {
       display: flex;
       align-content: center; }
-      #testimonials blockquote .footer span {
+      #testimonials blockquote .footer .citation {
         margin-left: 0.4em; }
       #testimonials blockquote .footer p {
         margin: 0;
@@ -298,8 +298,6 @@ header {
     @media (max-width: 720px) {
       #email-form form {
         flex-direction: column; } }
-    #email-form form label {
-      display: none; }
     #email-form form input[type="email"] {
       border: none;
       border-radius: 99em;
@@ -360,6 +358,8 @@ footer {
       justify-content: flex-start;
       margin-bottom: 2em;
       max-width: 100%; }
+      footer .footer__links__column div > a {
+        content: " "; }
       footer .footer__links__column img {
         float: left;
         margin-right: 2em; }

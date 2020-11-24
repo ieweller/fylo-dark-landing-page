@@ -381,7 +381,7 @@ header {
       display: flex;
       align-content: center;
 
-      span {
+      .citation {
         margin-left: 0.4em;
       }
 
@@ -451,10 +451,6 @@ header {
 
     @media (max-width: $mobile-breakpoint) {
       flex-direction: column;
-    }
-
-    label {
-      display: none;
     }
 
     input[type="email"] {
@@ -547,6 +543,10 @@ footer {
       justify-content: flex-start;
       margin-bottom: 2em;
       max-width: 100%;
+
+      div > a {
+        content: " ";
+      }
 
       img {
         float: left;
