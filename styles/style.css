@@ -358,8 +358,10 @@ footer {
       justify-content: flex-start;
       margin-bottom: 2em;
       max-width: 100%; }
-      footer .footer__links__column div > a > span > i::after {
-        content: " "; }
+      footer .footer__links__column div > a.social {
+        font-size: 0; }
+        footer .footer__links__column div > a.social span {
+          font-size: 0.5rem; }
       footer .footer__links__column img {
         float: left;
         margin-right: 2em; }

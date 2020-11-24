@@ -544,8 +544,12 @@ footer {
       margin-bottom: 2em;
       max-width: 100%;
 
-      div > a > span > i::after {
-        content: " ";
+      div > a.social {
+        font-size: 0;
+
+        span {
+          font-size: 0.5rem;
+        }
       }
 
       img {
@@ -569,10 +573,10 @@ footer {
         padding: 0;
        }
 
-       a {
-         line-height: 3em;
-         margin-right: 0.5em;
-       }
+      a {
+       line-height: 3em;
+        margin-right: 0.5em;
+      }
 
       &:first-child {
         width: 16rem;
