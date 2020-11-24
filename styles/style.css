@@ -298,6 +298,8 @@ header {
     @media (max-width: 720px) {
       #email-form form {
         flex-direction: column; } }
+    #email-form form label {
+      display: none; }
     #email-form form input[type="email"] {
       border: none;
       border-radius: 99em;

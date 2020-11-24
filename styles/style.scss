@@ -453,6 +453,10 @@ header {
       flex-direction: column;
     }
 
+    label {
+      display: none;
+    }
+
     input[type="email"] {
       border: none;
       border-radius: 99em;
