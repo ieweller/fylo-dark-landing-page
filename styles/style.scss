@@ -19,7 +19,8 @@ html {
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  width: 100vw;
 
   background-color: $color-mid-dark;
   color: $color-neutral;
@@ -58,21 +59,28 @@ h6 {
 }
 
 header {
-  align-content: center;
-  display: flex;
-  justify-content: space-between;
-  padding: 2rem 2rem;
 
-  // background-color: $color-mid-light;
+  .wrapper {
+    max-width: 1280px;
+    margin: 0 auto;
+    align-content: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 3.5rem 2rem 1rem 2rem;
 
-  @media (max-width: $mobile-breakpoint) {
-    padding: 1.4rem 1.25rem;
+    @media (max-width: $mobile-breakpoint) {
+      padding: 1.4rem 1.25rem;
+    }
   }
 
   .header__logo {
     max-width: 7rem;
     min-width: 4.5rem;
     width: 25%;
+
+    @media (max-width: $mobile-breakpoint) {
+      min-width: 3.5rem;
+    }
 
     img {
       width: 100%;
@@ -87,7 +95,17 @@ header {
     list-style: none;
 
     li {
-      margin: 0 0.3em;
+      margin: 0 1.5rem;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: $mobile-breakpoint) {
+        margin: 0 0.5rem;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
 
       a {
         color: $color-neutral;
@@ -98,7 +116,7 @@ header {
         text-decoration: none;
 
         @media (max-width: $mobile-breakpoint) {
-          font-size: 0.6em;
+          font-size: 0.5em;
         }
       }
     }
@@ -119,6 +137,10 @@ header {
     max-width: 33.5rem;
 
     text-align: center;
+
+    @media (max-width: $mobile-breakpoint) {
+      padding: 0 1rem;
+    }
   }
 
   .hero__background {
@@ -143,6 +165,10 @@ header {
     font-weight: 600;
     letter-spacing: 0.0625em;
     line-height: 1.4em;
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 1rem;
+    }
   }
 
   p {
@@ -155,7 +181,7 @@ header {
     @media (max-width: $mobile-breakpoint) {
       width: 90%;
 
-      font-size: 1em;
+      font-size: 0.6rem;
     }
   }
 
@@ -172,10 +198,10 @@ header {
     text-decoration: none;
 
     @media (max-width: $mobile-breakpoint) {
-      padding: 1rem;
-      width: 100%;
+      padding: 0.75rem;
+      width: 75%;
 
-      font-size: 0.9em;
+      font-size: 0.6em;
     }
   }
 }
@@ -187,10 +213,10 @@ header {
 
   .wrapper {
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    grid-row-gap: 3rem;
-    justify-content: space-between;
+    grid-gap: 3.5rem;
+    justify-content: space-around;
     margin: 0 auto;
     max-width: 38rem;
     // padding: 0 2em;
@@ -223,21 +249,22 @@ header {
       margin: 0.5em 0;
 
       font-size: 0.8em;
-      letter-spacing: 0.0625;
+      letter-spacing: 0.0625px;
+      font-weight: 600;
 
       @media (max-width: $mobile-breakpoint) {
         margin: 1em 0;
 
-        font-size: 1.25em;
-        font-weight: 600;
+        font-size: 0.8rem;
+        font-weight: 500;
       }
     }
 
     p {
-      font-size: 0.7em;
+      font-size: 0.6em;
 
       @media (max-width: $mobile-breakpoint) {
-        font-size: 1em;
+        font-size: 0.6em;
         font-weight: 300;
       }
     }
@@ -289,7 +316,8 @@ header {
     @media (max-width: $mobile-breakpoint) {
       margin: 2em 0 0.4em 0;
 
-      font-size: 1.15em;
+      font-weight: 500;
+      font-size: 0.8rem;
       line-height: 1.7em;
     }
   }
@@ -308,7 +336,8 @@ header {
     font-weight: 300;
 
     @media (max-width: $mobile-breakpoint) {
-      font-size: 1em;
+      font-size: 0.6em;
+      font-weight: 300;
     }
   }
 
@@ -362,7 +391,8 @@ header {
   }
 
   blockquote {
-    box-shadow:  0.4rem 0.4rem 0.2rem rgba(255,255,255,0.02);
+    border-radius: 0.2rem;
+    box-shadow:  0.2rem 0.2rem 0.4rem rgba(255,255,255,0.04);
     flex-basis: 1;
     margin: 0 1em 1em 1em;
     padding: 1em 1.2em;
@@ -370,10 +400,10 @@ header {
     background-color: $color-lightest;
 
     p {
-      font-size: 0.6em;
+      font-size: 0.55rem;
 
       @media (max-width: $mobile-breakpoint) {
-        font-size: 0.8em;
+        font-size: 0.5em;
       }
     }
 
@@ -388,11 +418,11 @@ header {
       p {
         margin: 0;
 
-        font-size: 0.4em;
+        font-size: 0.3rem;
         line-height: 1.1em;
 
         @media (max-width: $mobile-breakpoint) {
-          font-size: 0.6em;
+          font-size: 0.4em;
         }
 
         &:first-child {
@@ -409,6 +439,7 @@ header {
 
       p:first-child {
         font-weight: 700;
+        font-size: 0.4rem;
       }
     }
   }
@@ -416,32 +447,48 @@ header {
 
 #email-form {
   position: relative;
-  width: 100%;
+  margin: 0 1rem;
 
   .wrapper {
-    box-shadow: 0.4em 0.4em 0.4em rgba(0,0,0,0.2);
+    border-radius: 0.4rem;
+    box-shadow: 0 0 0.4em rgba(0,0,0,0.2);
     display: flex;
     flex-direction: column;
-    padding: 2em;
+    padding: 2em 3rem;
     max-width: 38rem;
     margin: 0 auto;
 
     background-color: $color-mid-light;
 
     text-align: center;
+
+    @media (max-width: $mobile-breakpoint) {
+      padding: 1rem;
+    }
   }
 
   h2 {
     margin: 0;
 
     font-size: 1.3em;
-    font-weight: 500;
+    font-weight: 600;
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 1rem;
+    }
   }
 
   p {
-    margin: 1em 0 2.5em 0;
+    margin: 1em auto 2em auto;
+    max-width: 85%;
 
-    font-size: 0.7em;
+    font-size: 0.55em;
+    font-weight: 400;
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 0.6rem;
+      margin-bottom: 0.5rem;
+    }
   }
 
   form {
@@ -456,40 +503,45 @@ header {
     input[type="email"] {
       border: none;
       border-radius: 99em;
-      padding: 2em 3em;
-      margin: 1em 0;
+      padding: 0.6em 3em;
+      margin: 0.6rem 0;
       width: 65%;
+
+      font-size: 0.6rem;
 
       @media (max-width: $mobile-breakpoint) {
         width: 100%;
+        padding: 0.65rem 2rem;
       }
 
       &::placeholder {
         color: #afafaf;
-
-        font-size: 1.4em;
       }
     }
 
     button {
       border: none;
       border-radius: 99em;
-      margin: 1em 0;
-      padding: 1em;
+      margin: 0.6rem 0;
+      padding: 0.6rem;
       width: 30%;
 
       font-size: 0.6em;
 
+      background-color: $color-button;
+      color: $color-neutral;
+
+      &:hover {
+        cursor: pointer;
+      }
+
       @media (max-width: $mobile-breakpoint) {
-        font-size: 0.8em;
+        font-size: 0.7em;
       }
 
       @media (max-width: $mobile-breakpoint) {
         width: 100%;
       }
-
-      background-color: $color-button;
-      color: $color-neutral;
     }
   }
 }
@@ -505,9 +557,13 @@ footer {
 
   .wrapper {
     margin: auto;
-    max-width: 58rem;
+    max-width: 1280px;
 
-    font-size: 0.7em;
+    font-size: 0.55rem;
+
+    @media (max-width: $mobile-breakpoint) {
+      font-size: 0.8rem;
+    }
   }
 
   .footer__logo {
@@ -543,23 +599,35 @@ footer {
       justify-content: flex-start;
       margin-bottom: 2em;
       max-width: 100%;
+      line-height: 1.5rem;
 
       div > a.social {
         font-size: 0;
 
         span {
-          font-size: 0.5rem;
+          font-size: 0.65rem;
+
+           i:last-child {
+             font-size: 0.55rem;
+           }
         }
       }
 
       img {
-        float: left;
         margin-right: 2em;
+        display: inline;
+
+        &#location-icon {
+          align-self: flex-start;
+          margin-top: 0.45rem;
+        }
       }
 
       p {
+        display: inline;
         overflow: hidden;
         margin: 0;
+        vertical-align: text-top;
       }
 
       &__link-icon {
@@ -574,7 +642,7 @@ footer {
        }
 
       a {
-       line-height: 3em;
+       // line-height: 3em;
         margin-right: 0.5em;
       }
 
@@ -593,6 +661,12 @@ footer {
 
       &:last-child {
         width: 5.5rem;
+
+        @media (max-width: $mobile-breakpoint) {
+          width: 100%;
+          align-items: center;
+        }
+
       }
 
     }

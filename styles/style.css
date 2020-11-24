@@ -6,7 +6,8 @@ html {
   font-size: 22px; }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  width: 100vw;
   background-color: #181f2a;
   color: white;
   font-family: 'Open Sans', sans-serif; }
@@ -36,36 +37,50 @@ h6 {
     .background-image {
       height: 27rem; } }
 
-header {
+header .wrapper {
+  max-width: 1280px;
+  margin: 0 auto;
   align-content: center;
   display: flex;
   justify-content: space-between;
-  padding: 2rem 2rem; }
+  padding: 3.5rem 2rem 1rem 2rem; }
   @media (max-width: 720px) {
-    header {
+    header .wrapper {
       padding: 1.4rem 1.25rem; } }
-  header .header__logo {
-    max-width: 7rem;
-    min-width: 4.5rem;
-    width: 25%; }
-    header .header__logo img {
-      width: 100%;
-      height: auto; }
-  header .header__menu {
+
+header .header__logo {
+  max-width: 7rem;
+  min-width: 4.5rem;
+  width: 25%; }
+  @media (max-width: 720px) {
+    header .header__logo {
+      min-width: 3.5rem; } }
+  header .header__logo img {
+    width: 100%;
+    height: auto; }
+
+header .header__menu {
+  display: flex;
+  margin: 0;
+  list-style: none; }
+  header .header__menu li {
+    margin: 0 1.5rem;
     display: flex;
-    margin: 0;
-    list-style: none; }
-    header .header__menu li {
-      margin: 0 0.3em; }
-      header .header__menu li a {
-        color: white;
-        font-family: 'Raleway', sans-serif;
-        font-size: 0.7em;
-        font-weight: 300;
-        text-decoration: none; }
-        @media (max-width: 720px) {
-          header .header__menu li a {
-            font-size: 0.6em; } }
+    align-items: center; }
+    @media (max-width: 720px) {
+      header .header__menu li {
+        margin: 0 0.5rem; } }
+    header .header__menu li:last-child {
+      margin-right: 0; }
+    header .header__menu li a {
+      color: white;
+      font-family: 'Raleway', sans-serif;
+      font-size: 0.7em;
+      font-weight: 300;
+      text-decoration: none; }
+      @media (max-width: 720px) {
+        header .header__menu li a {
+          font-size: 0.5em; } }
 
 #hero {
   margin: 0 auto 6rem auto;
@@ -78,6 +93,9 @@ header {
     padding: 0 2rem;
     max-width: 33.5rem;
     text-align: center; }
+    @media (max-width: 720px) {
+      #hero .wrapper {
+        padding: 0 1rem; } }
   #hero .hero__background {
     margin-top: 1.55rem;
     margin-bottom: 0.7rem;
@@ -94,6 +112,9 @@ header {
     font-weight: 600;
     letter-spacing: 0.0625em;
     line-height: 1.4em; }
+    @media (max-width: 720px) {
+      #hero h1 {
+        font-size: 1rem; } }
   #hero p {
     width: 78%;
     font-size: 0.8em;
@@ -102,7 +123,7 @@ header {
     @media (max-width: 720px) {
       #hero p {
         width: 90%;
-        font-size: 1em; } }
+        font-size: 0.6rem; } }
   #hero a {
     border-radius: 99rem;
     padding: 0.8rem 4rem;
@@ -114,9 +135,9 @@ header {
     text-decoration: none; }
     @media (max-width: 720px) {
       #hero a {
-        padding: 1rem;
-        width: 100%;
-        font-size: 0.9em; } }
+        padding: 0.75rem;
+        width: 75%;
+        font-size: 0.6em; } }
 
 #features {
   margin: 0;
@@ -124,10 +145,10 @@ header {
   width: 100%; }
   #features .wrapper {
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: auto auto;
     grid-template-rows: auto auto;
-    grid-row-gap: 3rem;
-    justify-content: space-between;
+    grid-gap: 3.5rem;
+    justify-content: space-around;
     margin: 0 auto;
     max-width: 38rem; }
     @media (max-width: 720px) {
@@ -149,17 +170,18 @@ header {
     #features .features__text-block h2 {
       margin: 0.5em 0;
       font-size: 0.8em;
-      letter-spacing: 0.0625; }
+      letter-spacing: 0.0625px;
+      font-weight: 600; }
       @media (max-width: 720px) {
         #features .features__text-block h2 {
           margin: 1em 0;
-          font-size: 1.25em;
-          font-weight: 600; } }
+          font-size: 0.8rem;
+          font-weight: 500; } }
     #features .features__text-block p {
-      font-size: 0.7em; }
+      font-size: 0.6em; }
       @media (max-width: 720px) {
         #features .features__text-block p {
-          font-size: 1em;
+          font-size: 0.6em;
           font-weight: 300; } }
 
 #cta {
@@ -194,7 +216,8 @@ header {
     @media (max-width: 720px) {
       #cta h2 {
         margin: 2em 0 0.4em 0;
-        font-size: 1.15em;
+        font-weight: 500;
+        font-size: 0.8rem;
         line-height: 1.7em; } }
   #cta p {
     margin: 0.5rem 0; }
@@ -205,7 +228,8 @@ header {
     font-weight: 300; }
     @media (max-width: 720px) {
       #cta p, #cta a {
-        font-size: 1em; } }
+        font-size: 0.6em;
+        font-weight: 300; } }
   #cta .btn {
     align-items: center;
     display: flex;
@@ -241,16 +265,17 @@ header {
     margin-left: 0.7em;
     width: 2.5rem; }
   #testimonials blockquote {
-    box-shadow: 0.4rem 0.4rem 0.2rem rgba(255, 255, 255, 0.02);
+    border-radius: 0.2rem;
+    box-shadow: 0.2rem 0.2rem 0.4rem rgba(255, 255, 255, 0.04);
     flex-basis: 1;
     margin: 0 1em 1em 1em;
     padding: 1em 1.2em;
     background-color: #202a3c; }
     #testimonials blockquote p {
-      font-size: 0.6em; }
+      font-size: 0.55rem; }
       @media (max-width: 720px) {
         #testimonials blockquote p {
-          font-size: 0.8em; } }
+          font-size: 0.5em; } }
     #testimonials blockquote .footer {
       display: flex;
       align-content: center; }
@@ -258,11 +283,11 @@ header {
         margin-left: 0.4em; }
       #testimonials blockquote .footer p {
         margin: 0;
-        font-size: 0.4em;
+        font-size: 0.3rem;
         line-height: 1.1em; }
         @media (max-width: 720px) {
           #testimonials blockquote .footer p {
-            font-size: 0.6em; } }
+            font-size: 0.4em; } }
         #testimonials blockquote .footer p:first-child {
           margin-bottom: 0.6em; }
       #testimonials blockquote .footer img {
@@ -270,27 +295,41 @@ header {
         height: 1em;
         width: 1em; }
       #testimonials blockquote .footer p:first-child {
-        font-weight: 700; }
+        font-weight: 700;
+        font-size: 0.4rem; }
 
 #email-form {
   position: relative;
-  width: 100%; }
+  margin: 0 1rem; }
   #email-form .wrapper {
-    box-shadow: 0.4em 0.4em 0.4em rgba(0, 0, 0, 0.2);
+    border-radius: 0.4rem;
+    box-shadow: 0 0 0.4em rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    padding: 2em;
+    padding: 2em 3rem;
     max-width: 38rem;
     margin: 0 auto;
     background-color: #1c2431;
     text-align: center; }
+    @media (max-width: 720px) {
+      #email-form .wrapper {
+        padding: 1rem; } }
   #email-form h2 {
     margin: 0;
     font-size: 1.3em;
-    font-weight: 500; }
+    font-weight: 600; }
+    @media (max-width: 720px) {
+      #email-form h2 {
+        font-size: 1rem; } }
   #email-form p {
-    margin: 1em 0 2.5em 0;
-    font-size: 0.7em; }
+    margin: 1em auto 2em auto;
+    max-width: 85%;
+    font-size: 0.55em;
+    font-weight: 400; }
+    @media (max-width: 720px) {
+      #email-form p {
+        font-size: 0.6rem;
+        margin-bottom: 0.5rem; } }
   #email-form form {
     display: flex;
     justify-content: space-between;
@@ -301,27 +340,30 @@ header {
     #email-form form input[type="email"] {
       border: none;
       border-radius: 99em;
-      padding: 2em 3em;
-      margin: 1em 0;
-      width: 65%; }
+      padding: 0.6em 3em;
+      margin: 0.6rem 0;
+      width: 65%;
+      font-size: 0.6rem; }
       @media (max-width: 720px) {
         #email-form form input[type="email"] {
-          width: 100%; } }
+          width: 100%;
+          padding: 0.65rem 2rem; } }
       #email-form form input[type="email"]::placeholder {
-        color: #afafaf;
-        font-size: 1.4em; }
+        color: #afafaf; }
     #email-form form button {
       border: none;
       border-radius: 99em;
-      margin: 1em 0;
-      padding: 1em;
+      margin: 0.6rem 0;
+      padding: 0.6rem;
       width: 30%;
       font-size: 0.6em;
       background-color: #43b2d0;
       color: white; }
+      #email-form form button:hover {
+        cursor: pointer; }
       @media (max-width: 720px) {
         #email-form form button {
-          font-size: 0.8em; } }
+          font-size: 0.7em; } }
       @media (max-width: 720px) {
         #email-form form button {
           width: 100%; } }
@@ -333,8 +375,11 @@ footer {
   background-color: #0b1523; }
   footer .wrapper {
     margin: auto;
-    max-width: 58rem;
-    font-size: 0.7em; }
+    max-width: 1280px;
+    font-size: 0.55rem; }
+    @media (max-width: 720px) {
+      footer .wrapper {
+        font-size: 0.8rem; } }
   footer .footer__logo {
     margin: 3em 0; }
   footer .footer__links {
@@ -357,17 +402,25 @@ footer {
       align-items: flex-start;
       justify-content: flex-start;
       margin-bottom: 2em;
-      max-width: 100%; }
+      max-width: 100%;
+      line-height: 1.5rem; }
       footer .footer__links__column div > a.social {
         font-size: 0; }
         footer .footer__links__column div > a.social span {
-          font-size: 0.5rem; }
+          font-size: 0.65rem; }
+          footer .footer__links__column div > a.social span i:last-child {
+            font-size: 0.55rem; }
       footer .footer__links__column img {
-        float: left;
-        margin-right: 2em; }
+        margin-right: 2em;
+        display: inline; }
+        footer .footer__links__column img#location-icon {
+          align-self: flex-start;
+          margin-top: 0.45rem; }
       footer .footer__links__column p {
+        display: inline;
         overflow: hidden;
-        margin: 0; }
+        margin: 0;
+        vertical-align: text-top; }
       footer .footer__links__column__link-icon {
         align-items: center;
         display: flex;
@@ -376,7 +429,6 @@ footer {
         margin: 0;
         padding: 0; }
       footer .footer__links__column a {
-        line-height: 3em;
         margin-right: 0.5em; }
       footer .footer__links__column:first-child {
         width: 16rem; }
@@ -386,3 +438,7 @@ footer {
         width: 6rem; }
       footer .footer__links__column:last-child {
         width: 5.5rem; }
+        @media (max-width: 720px) {
+          footer .footer__links__column:last-child {
+            width: 100%;
+            align-items: center; } }
